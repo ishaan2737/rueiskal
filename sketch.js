@@ -1,3 +1,14 @@
+
+
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+
+var engine, world;
+
+
+
 function Preload(){
 
 
@@ -7,7 +18,10 @@ function Preload(){
 
 function setup() {
   createCanvas(480,800);
-  createSprite(400, 200, 50, 50);
+
+  engine = Engine.create();
+    world = engine.world;
+
 
   plinko1 = new Plinko(20,20,20,20);
 }
